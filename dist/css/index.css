@@ -1,0 +1,296 @@
+*{
+	border: 0;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	border-radius: 0;
+	text-decoration: none;
+}
+
+
+
+:root{
+
+	--color:hsl(160, 100%, 20%);
+	--color-hover:hsl(160, 100%, 25%);
+	--text-white: hsl(0, 0%, 90%);
+	--background-input: hsl(0, 0%, 36%);
+	--background: hsl(240, 3%, 15%);
+	--color-erro: hsl(0, 100%, 36%);
+	--text-black: hsl(0, 0%, 12%);
+
+
+	font-family: 'Roboto', sans-serif;
+	font-size: 62.5%;
+}
+
+html{
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	margin: 0;
+
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.6rem;
+
+	width: 100%;
+	height: 100%;
+
+	background-color: var(--text-black);
+}
+
+#app{
+	width: 100%;
+	height: 100%;
+
+	display: flex; 
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.form-container{
+	background-color: var(--background);
+
+	padding-block: 6.4rem ;
+	padding-inline: 2.4rem ;
+	
+	width: min(100% ,35rem);
+
+	display: flex; 
+	flex-direction: column;
+	border-radius: 2rem;
+	gap: 1.2rem;
+}
+
+
+.containerInput{
+	width: 100%;
+}
+
+
+.input {
+	margin-inline: auto;
+
+	width: 100%;
+
+	position: relative;
+
+	font-size: 16px;
+
+	border-radius: 4rem;
+
+	display: flex; 
+	align-items: center;
+
+}
+
+.input input{
+	-webkit-appearance: none;
+	appearance: none;
+
+	width: 100%;
+	height: 5rem;
+
+	font-size: 1.6rem;
+
+	color: var(--text-white);
+
+	background-color: var(--text-black);
+
+	border-radius: 4rem;
+
+	padding: 0px 1.6rem 0px 3.6rem;
+
+	transition:border 0.2s ;
+}
+
+
+.input input:focus  {
+	opacity: 1;
+	outline: solid 2px var(--color);
+}
+
+.input input:focus ~ .svg1{
+	color: var(--color);
+}
+
+	
+.input.password input{
+	padding: 0px 3.6rem;
+}
+
+
+.svg1{
+	color: var(--background-input);
+
+	transform: translateX(-50%);
+
+	position: absolute;
+
+	left: 2rem;
+	z-index: 1;
+}
+
+.containerPasswordVisible{
+	color: var(--color);
+
+	position: absolute;
+
+	right:  1.3rem;
+}
+
+
+
+
+.containerPasswordVisible:hover {
+	opacity: 1;
+}
+
+.passwordVisible,.passwordNotVisible{
+	height: 1.6rem;
+
+	opacity: 0.7;
+}
+
+.passwordVisible:hover,.passwordNotVisible:hover{
+	opacity: 1;
+}
+
+.passwordVisible{
+	display: none;
+}
+
+.passwordNotVisible{
+	display: none;
+}
+
+.visible{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	user-select: none;
+	width: 1.6rem;
+	height: 1.6rem;
+}
+
+
+.erro{
+	color: var(--color-erro);
+}
+
+
+
+.subtitle{
+	font-size: 1.4rem;
+	margin-left: 1rem;
+}
+
+.formButton{
+	font-weight: 700;
+
+	background-color: var(--color);
+
+	color: var(--text-white);
+
+	padding-block: 1.7rem;
+
+	display: flex;
+	align-self: center;
+	justify-content: center;
+
+	transition:	background-color 0.2s;
+}
+
+.formButton:hover{
+	background-color: var(--color-hover);
+}
+
+.formButton:disabled,.formButton:disabled:hover{
+	cursor: no-drop;
+	opacity: 0.5;
+	background-color: var(--color);
+}
+
+
+.linkColor{
+	color: var(--color);
+	font-weight: 700;
+
+	transition: color 0.2s;
+}
+
+.linkColor:hover{
+	color: var(--color-hover);
+}
+
+
+.registration{
+	font-size: 1.4rem;
+	color: var(--text-white);
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+.textUnderlineHover:hover{
+	text-decoration: underline;
+}
+
+.cursorPointer{
+	cursor: pointer;
+}
+
+
+.form{
+	padding-block: 6.4rem ;
+	padding-inline: 2.4rem ;
+
+	width: min(100% ,35rem);
+
+	border-radius: 0.5rem;
+
+	display: flex; 
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1.2rem;
+}
+
+ .text-white{
+	color: var(--text-white);
+}
+
+.text-size-medium{
+	font-size: 2.8rem;
+}
+
+.text-size-big{
+	font-size: 4.2rem;
+}
+
+
+
+.form input{
+	outline: solid 0.2rem var(--background-input);
+}
+
+.login{
+	padding-top: 0.5rem;
+
+	font-size: 1.8rem;
+	color: var(--color);
+
+	display: flex;
+	justify-content: center;
+	transition: color 0.2s;
+}
+
+.login:hover{
+	color: var(--color-hover);
+}
+
